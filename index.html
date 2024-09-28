@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rock.css">
+</head>
+<body>
+    <h1>ROCK PAPER CESER</h1>
+  
+    <button class="button" onclick="
+     computerGeneratedd();
+     Resultgenerated();
+   
+     console.log(`COMPUTER CHOICE IS: ${ComputerChoice}`);
+   
+      alert(`Your choce is: ROCK  and ComputerChoice choice is: ${ComputerChoice} so Result= is: ${Result}`);
+     ">Rock</button>
+    <button class="button"  onclick="
+computerGeneratedd();
+     Resultgenerated();
+
+ 
+ alert(`Your choce is: PAPER  and ComputerChoice choice is: ${ComputerChoice} so Result= is: ${Result}`);
+">Paper</button>
+
+<button class="button"  onclick="
+computerGeneratedd();
+     Resultgenerated();
+
+
+ alert(`Your choce is: CESER  and ComputerChoice choice is: ${ComputerChoice} so Result= is: ${Result}`);
+">Ceser</button>
+<script>
+   let score={
+      win:0,
+      lost:0,
+      tie:0,
+   };
+    let  ComputerChoice;
+
+     let Number;
+ function computerGeneratedd()
+ {
+  
+      Number=Math.random()*3;
+
+     if(Number>0 && Number<=1)
+     {
+    ComputerChoice='Rock';
+     }
+     else if(Number>1 && Number <=2)
+     {
+        ComputerChoice='Paper';
+     }
+     else 
+     {
+       ComputerChoice='Ceser';
+     }
+   }
+
+   function Resultgenerated(computerGeneratedd())
+   {
+      if(ComputerChoice==='Rock')
+     {
+        Result= 'its a Tie';
+        score.tie++;
+     }
+     else if(ComputerChoice==='Paper')
+     {
+        Result= 'Computer has won';
+        score.lost++;
+     }
+     else if(ComputerChoice==='Ceser')
+     {
+        Result= 'You have won';
+        score.win++;
+     }
+   }
+    console.log(score);
+</script>
+</body>
+</html>
